@@ -1,1 +1,256 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Κοινότητα Συμπαράστασης Σύρου</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Literata:opsz,wght@7..72,400;7..72,600&display=swap">
+<style>
+/* Layout: sticky menu, wide hero with a wave-line motif, then calm single-column sections with card grids for partners and national links. */
+:root {
+  --bg: #f3f7f8;
+  --surface: #ffffff;
+  --fg: #14303d;
+  --muted: #4d6671;
+  --sea: #1d6a85;
+  --sea-deep: #0f4257;
+  --line: #d3e0e4;
+  --accent: #d9a02b;
+  --on-sea: #ffffff;
+  --font-display: "Literata", "Georgia", serif;
+  --font-body: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0e1d24; --surface: #152a34; --fg: #e6f0f3; --muted: #9db6bf;
+    --sea: #66b6d2; --sea-deep: #0a2f3f; --line: #264452; --accent: #e8b84a; --on-sea: #0e1d24;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0e1d24; --surface: #152a34; --fg: #e6f0f3; --muted: #9db6bf;
+  --sea: #66b6d2; --sea-deep: #0a2f3f; --line: #264452; --accent: #e8b84a; --on-sea: #0e1d24;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 76px; }
+body {
+  background: var(--bg); color: var(--fg);
+  font-family: var(--font-body); font-size: 17px; line-height: 1.65;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 30; background: var(--surface); }
+a { color: var(--sea); }
+a:focus-visible, button:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+.wrap { max-width: 1040px; margin: 0 auto; }
 
+/* menu */
+.top { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 20; background: var(--surface); border-bottom: 1px solid var(--line);
+  margin-left: calc(-1 * max(16px, env(safe-area-inset-left, 0px))); margin-right: calc(-1 * max(16px, env(safe-area-inset-right, 0px)));
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+.top .wrap { display: flex; align-items: center; justify-content: space-between; gap: 20px; min-height: 60px; }
+.brand { font-family: var(--font-display); font-weight: 600; font-size: 1.05rem; color: var(--fg); text-decoration: none; white-space: nowrap; }
+nav { min-width: 0; overflow-x: auto; }
+nav ul { list-style: none; margin: 0; padding: 0; display: flex; gap: 4px; }
+nav a { display: block; padding: 8px 12px; border-radius: 6px; color: var(--muted); text-decoration: none; font-size: 0.93rem; font-weight: 500; white-space: nowrap; }
+nav a:hover { color: var(--fg); background: var(--bg); }
+@media (max-width: 760px) { .top .wrap { flex-direction: column; align-items: flex-start; gap: 0; padding-top: 8px; } nav { width: 100%; padding-bottom: 6px; } }
+
+/* hero */
+.hero { padding-block: 72px 56px; }
+.eyebrow { font-size: 0.82rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--sea); font-weight: 600; margin: 0 0 16px; }
+h1 { font-family: var(--font-display); font-weight: 600; font-size: clamp(2.2rem, 6vw, 4rem); line-height: 1.1; margin: 0 0 24px; max-width: 16ch; text-wrap: balance; }
+.lead { font-size: 1.22rem; color: var(--muted); max-width: 40em; margin: 0 0 32px; }
+.btns { display: flex; flex-wrap: wrap; gap: 12px; }
+.btn { display: inline-block; padding: 12px 22px; border-radius: 8px; font-weight: 600; text-decoration: none; border: 2px solid var(--sea); }
+.btn.primary { background: var(--sea); color: var(--on-sea); }
+.btn.ghost { color: var(--sea); }
+.wave { display: block; width: 100%; height: 40px; margin-top: 48px; color: var(--accent); }
+
+section { padding-block: 56px; }
+h2 { font-family: var(--font-display); font-weight: 600; font-size: clamp(1.6rem, 4vw, 2.3rem); line-height: 1.2; margin: 0 0 16px; text-wrap: balance; }
+.intro { color: var(--muted); max-width: 42em; margin: 0 0 32px; }
+p { margin: 0 0 1em; }
+.band { background: var(--surface); border-block: 1px solid var(--line);
+  margin-left: calc(-1 * max(16px, env(safe-area-inset-left, 0px))); margin-right: calc(-1 * max(16px, env(safe-area-inset-right, 0px)));
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+
+.about { display: grid; grid-template-columns: 1.3fr 1fr; gap: 48px; align-items: start; }
+.about > * { min-width: 0; }
+@media (max-width: 800px) { .about { grid-template-columns: 1fr; gap: 24px; } }
+.pillars { display: grid; gap: 16px; }
+.pillar { border-left: 4px solid var(--accent); padding: 4px 0 4px 16px; }
+.pillar h3 { margin: 0 0 4px; font-size: 1.05rem; }
+.pillar p { margin: 0; color: var(--muted); font-size: 0.97rem; }
+
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; }
+.grid > * { min-width: 0; }
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 24px; display: flex; flex-direction: column; gap: 10px; }
+.band .card { background: var(--bg); }
+.card h3 { font-family: var(--font-display); font-size: 1.2rem; line-height: 1.3; margin: 0; }
+.card p { margin: 0; color: var(--muted); font-size: 0.97rem; }
+.card .more { margin-top: auto; padding-top: 8px; font-weight: 600; }
+.tag { align-self: flex-start; font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--sea); font-weight: 600; }
+a.card { text-decoration: none; color: var(--fg); transition: border-color .15s; }
+a.card:hover { border-color: var(--sea); }
+a.card .more { color: var(--sea); }
+.mail { font-weight: 600; word-break: break-all; user-select: all; }
+
+h3.group { font-size: 1.05rem; margin: 36px 0 14px; color: var(--sea-deep); }
+:root[data-theme="dark"] h3.group { color: var(--sea); }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) h3.group { color: var(--sea); } }
+h3.group:first-of-type { margin-top: 0; }
+
+.help { display: flex; flex-wrap: wrap; gap: 20px 32px; align-items: center; background: var(--sea-deep); color: #fff; border-radius: 12px; padding: 28px; margin-top: 36px; }
+.help .num { font-family: var(--font-display); font-size: 3rem; font-weight: 600; line-height: 1; color: var(--accent); }
+.help div { min-width: 0; flex: 1 1 260px; }
+.help p { margin: 0; }
+.note { font-size: 0.92rem; color: var(--muted); margin-top: 24px; }
+footer { padding-block: 40px 56px; color: var(--muted); font-size: 0.92rem; border-top: 1px solid var(--line); }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } a.card { transition: none; } }
+</style>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top">Κοινότητα Συμπαράστασης Σύρου</a>
+    <nav aria-label="Κύριο μενού">
+      <ul>
+        <li><a href="#poioi-eimaste">Ποιοι είμαστε</a></li>
+        <li><a href="#synergasies">Συνεργασίες</a></li>
+        <li><a href="#syllogoi">Σύλλογοι στην Ελλάδα</a></li>
+        <li><a href="#epikoinonia">Επικοινωνία</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <div class="wrap">
+    <div class="hero">
+      <p class="eyebrow">Σύρος · Κυκλάδες</p>
+      <h1>Κανείς δεν φροντίζει μόνος του</h1>
+      <p class="lead">Η Κοινότητα Συμπαράστασης Σύρου είναι μια καινούργια ομάδα ανθρώπων του νησιού. Θέλουμε οι φροντιστές ατόμων με ασθένεια, αναπηρία ή άνοια να βρίσκουν στη Σύρο κάποιον να τους ακούσει, να τους δείξει τον δρόμο και να μοιραστεί το βάρος μαζί τους.</p>
+      <div class="btns">
+        <a class="btn primary" href="#synergasies">Οι συνεργάτες μας</a>
+        <a class="btn ghost" href="#syllogoi">Σύλλογοι σε όλη την Ελλάδα</a>
+      </div>
+      <svg class="wave" viewBox="0 0 800 40" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M0 20 Q 50 0 100 20 T 200 20 T 300 20 T 400 20 T 500 20 T 600 20 T 700 20 T 800 20" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+      </svg>
+    </div>
+  </div>
+
+  <div class="band">
+    <div class="wrap">
+      <section id="poioi-eimaste">
+        <div class="about">
+          <div>
+            <h2>Ποιοι είμαστε</h2>
+            <p>Είμαστε μια ομάδα που δημιουργήθηκε πρόσφατα στη Σύρο. Ξεκινήσαμε από μια απλή παρατήρηση: σε ένα μικρό νησί, πολλοί άνθρωποι φροντίζουν καθημερινά έναν δικό τους, και τις περισσότερες φορές το κάνουν χωρίς βοήθεια και χωρίς να ξέρουν σε ποιον να απευθυνθούν.</p>
+            <p>Δεν αντικαθιστούμε τους φορείς και τους συλλόγους που ήδη δουλεύουν στο νησί. Δουλεύουμε δίπλα τους. Θέλουμε να φέρνουμε κοντά φροντιστές, οικογένειες, εθελοντές και υπηρεσίες, ώστε η υποστήριξη να είναι πιο εύκολο να βρεθεί.</p>
+            <p>Είμαστε στην αρχή και χτίζουμε σιγά σιγά. Αν θέλεις να βοηθήσεις ή να μας πεις τι χρειάζεται η γειτονιά σου, θα χαρούμε να σε ακούσουμε.</p>
+          </div>
+          <div class="pillars">
+            <div class="pillar"><h3>Ακούμε</h3><p>Κάθε οικογένεια έχει τη δική της ιστορία. Ξεκινάμε από αυτά που χρειάζεται ο φροντιστής, όχι από όσα υποθέτουμε.</p></div>
+            <div class="pillar"><h3>Συνδέουμε</h3><p>Δείχνουμε προς τους συλλόγους, τις υπηρεσίες του Δήμου και τις πανελλήνιες οργανώσεις που μπορούν να βοηθήσουν.</p></div>
+            <div class="pillar"><h3>Στηρίζουμε</h3><p>Η φροντίδα κουράζει. Θέλουμε ο φροντιστής να έχει και αυτός κάποιον δίπλα του.</p></div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <section id="synergasies">
+      <h2>Συνεργασίες στη Σύρο</h2>
+      <p class="intro">Δουλεύουμε μαζί με φορείς του νησιού που γνωρίζουν από κοντά τις ανάγκες των ανθρώπων.</p>
+      <div class="grid">
+        <a class="card" href="https://www.syros-ermoupolis.gr/" target="_blank" rel="noopener">
+          <span class="tag">Τοπική αυτοδιοίκηση</span>
+          <h3>Δήμος Σύρου-Ερμούπολης</h3>
+          <p>Ο Δήμος είναι βασικός μας συνεργάτης. Οι κοινωνικές υπηρεσίες και οι δράσεις του φτάνουν σε κάθε γειτονιά του νησιού.</p>
+          <span class="more">Επίσκεψη στο site →</span>
+        </a>
+        <a class="card" href="https://syrosculturenet.gr/" target="_blank" rel="noopener">
+          <span class="tag">Άνοια και νευροεκφυλιστικά νοσήματα</span>
+          <h3>Σύλλογος «Αγκαλιά Μνήμης»</h3>
+          <p>Ο Σύλλογος Φίλων, Φροντιστών και Ατόμων με Άνοια και Νευροεκφυλιστικά Νοσήματα του Εγκεφάλου Νομού Κυκλάδων. Ιδρύθηκε το 2025 με στόχο μια κοινωνία χωρίς στίγμα για την άνοια.</p>
+          <span class="more">Γνωρίστε τον σύλλογο →</span>
+        </a>
+        <div class="card">
+          <span class="tag">Προβλήματα όρασης</span>
+          <h3>«ΑΡΩΓΗ» – Σωματείο Ατόμων με Προβλήματα Όρασης Νομού Κυκλάδων</h3>
+          <p>Το σωματείο στηρίζει άτομα με οπτική αναπηρία στις Κυκλάδες και οργανώνει δράσεις ευαισθητοποίησης, όπως το «Σκάκι στα Τυφλά». Αναζητά και εθελοντές συνοδούς.</p>
+          <span class="more">Επικοινωνία: <span class="mail">arogink18@gmail.com</span></span>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <div class="band">
+    <div class="wrap">
+      <section id="syllogoi">
+        <h2>Σύλλογοι σε όλη την Ελλάδα</h2>
+        <p class="intro">Για φροντιστές ατόμων με άνοια, προβλήματα όρασης ή άλλη αναπηρία, υπάρχουν πανελλήνιες οργανώσεις με πληροφορίες, οδηγούς και υποστήριξη. Κάθε κάρτα οδηγεί στο επίσημο site τους.</p>
+
+        <h3 class="group">Άνοια και νόσος Alzheimer</h3>
+        <div class="grid">
+          <a class="card" href="https://alzheimerathens.gr/" target="_blank" rel="noopener">
+            <h3>Εταιρεία Alzheimer Αθηνών</h3>
+            <p>Κέντρα ημέρας, συμβουλευτική και ενημέρωση για άτομα με άνοια και τους φροντιστές τους. Οργανώνει την Ημέρα Φροντιστή.</p>
+            <span class="more">alzheimerathens.gr →</span>
+          </a>
+          <a class="card" href="https://www.alzheimer-federation.gr/" target="_blank" rel="noopener">
+            <h3>Πανελλήνια Ομοσπονδία Νόσου Alzheimer και Συναφών Διαταραχών</h3>
+            <p>Ομοσπονδία με έδρα τη Θεσσαλονίκη. Συντονίζει τις εταιρείες Alzheimer σε όλη τη χώρα.</p>
+            <span class="more">alzheimer-federation.gr →</span>
+          </a>
+        </div>
+        <div class="help">
+          <span class="num">1102</span>
+          <div><p><strong>Γραμμή Βοήθειας για την Άνοια.</strong> Την παρέχει η Εταιρεία Alzheimer Αθηνών και απευθύνεται και σε φροντιστές, με πληροφορίες και διασύνδεση με υπηρεσίες σε όλη την Ελλάδα.</p></div>
+        </div>
+
+        <h3 class="group">Προβλήματα όρασης</h3>
+        <div class="grid">
+          <a class="card" href="https://www.eoty.gr/" target="_blank" rel="noopener">
+            <h3>Εθνική Ομοσπονδία Τυφλών (Ε.Ο.Τ.)</h3>
+            <p>Η εθνική ομοσπονδία των σωματείων τυφλών. Η «Αρωγή» ανακοινώνει εκεί τις δράσεις της.</p>
+            <span class="more">eoty.gr →</span>
+          </a>
+          <a class="card" href="https://www.pst.gr/" target="_blank" rel="noopener">
+            <h3>Πανελλήνιος Σύνδεσμος Τυφλών (Π.Σ.Τ.)</h3>
+            <p>Ιστορικό σωματείο τυφλών με περιφερειακές ενώσεις σε πολλά μέρη της Ελλάδας.</p>
+            <span class="more">pst.gr →</span>
+          </a>
+          <a class="card" href="https://www.fte.org.gr/" target="_blank" rel="noopener">
+            <h3>Φάρος Τυφλών της Ελλάδος</h3>
+            <p>Υπηρεσίες κοινωνικής υποστήριξης και δημιουργικής απασχόλησης για τυφλούς και άτομα με μειωμένη όραση.</p>
+            <span class="more">fte.org.gr →</span>
+          </a>
+        </div>
+
+        <h3 class="group">Αναπηρία και χρόνιες παθήσεις</h3>
+        <div class="grid">
+          <a class="card" href="https://www.esamea.gr/" target="_blank" rel="noopener">
+            <h3>Εθνική Συνομοσπονδία Ατόμων με Αναπηρία (Ε.Σ.Α.μεΑ.)</h3>
+            <p>Η τριτοβάθμια οργάνωση των ατόμων με αναπηρία, χρόνιες παθήσεις και των οικογενειών τους. Εκδίδει οδηγούς με τα δικαιώματά τους.</p>
+            <span class="more">esamea.gr →</span>
+          </a>
+        </div>
+        <p class="note">Οι σύνδεσμοι ανοίγουν σε νέα καρτέλα. Η Κοινότητα Συμπαράστασης Σύρου δεν διαχειρίζεται αυτούς τους ιστότοπους.</p>
+      </section>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <section id="epikoinonia">
+      <h2>Επικοινωνία</h2>
+      <p class="intro">Είσαι φροντιστής, εθελοντής ή εκπροσωπείς κάποιο φορέα και θέλεις να συνεργαστούμε; Τα στοιχεία επικοινωνίας της ομάδας θα προστεθούν εδώ σύντομα. Μέχρι τότε, μπορείς να απευθυνθείς στους συνεργάτες μας παραπάνω.</p>
+    </section>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">© Κοινότητα Συμπαράστασης Σύρου · Σύρος, Κυκλάδες</div>
+</footer>
+
+</body></html>
